@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tree Traversal Explorer</title>
+</head>
+<body>
+
+    <div class="main-container">
+
+        <div class="left-section">
+
+            <h1>🌳 Tree Traversal Explorer</h1>
+
+            <h2>Input Array</h2>
+
+            <div class="input-section">
+                <input
+                    type="text"
+                    id="input-array"
+                    placeholder="Example: 10 5 15 3 7"
+                >
+
+                <button id="build-tree">
+                    Build Tree
+                </button>
+            </div>
+
+            <h3>Select Traversal</h3>
+
+            <div class="traversal-section">
+
+                <select id="traversal-type">
+                    <option value="inorder">Inorder</option>
+                    <option value="preorder">Preorder</option>
+                    <option value="postorder">Postorder</option>
+                    <option value="levelorder">Level Order</option>
+                </select>
+
+                <button id="traverse-tree">
+                    Traverse Tree
+                </button>
+
+            </div>
+
+            <div class="output-section">
+
+                <h2>Traversal Output</h2>
+
+                <div id="traversal-output">
+                    Output will appear here
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="right-section">
+
+            <h2>Visual Tree</h2>
+
+            <div id="tree-container">
+
+                <!-- BST will be rendered here -->
+
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+</html>
