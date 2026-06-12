@@ -1,7 +1,14 @@
+/* Google Font:
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+*/
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: "Outfit", sans-serif;
 }
 
 body{
@@ -9,117 +16,209 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #a78de4;
+
+    background: #EEE6FF;
 }
 
 .main-div{
     width: 90%;
-    min-height: 80vh;
+    max-width: 1400px;
+    min-height: 85vh;
+
     display: flex;
-    gap: 3rem;
+    align-items: center;
+    justify-content: space-between;
+    gap: 4rem;
 }
 
-.left-section{
-    flex: 2;
-    max-width: 800px;
-    padding: 2rem;
-    margin-top: 3rem;
+.left{
+    flex: 1.2;
 
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: flex-start;
 
-    gap: 20px;
+    gap: 3rem;
+}
+
+.left-section{
+    display: flex;
+    flex-direction: column;
+    gap: 1.8rem;
 }
 
 .right-section{
     flex: 1;
-    padding: 2rem;
 
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.card{
+.right-section img{
     width: 100%;
-    padding: 3rem;
+    max-width: 500px;
+    height: auto;
+    object-fit: contain;
 
-    border: 2px solid rgb(181, 69, 69);
-    border-radius: 16px;
+    filter: drop-shadow(0 18px 30px rgba(108, 85, 180, 0.18));
+}
 
-    background-color: #7458b4;
+/* =========================
+        HERO SECTION
+========================= */
 
-    cursor: pointer;
+#main-heading{
+    font-size: 4rem;
+    font-weight: 800;
+    color: #4F2D7F;
+
+    margin-bottom: 1rem;
+}
+
+#main-para{
+    max-width: 650px;
+
+    font-size: 1.15rem;
+    line-height: 1.8;
+
+    color: #5F5875;
+}
+
+/* =========================
+          CARDS
+========================= */
+
+.card{
+
+    width: 100%;
+
+    padding: 2.5rem;
+
+    background: #FCFAFF;
+
+    border: 1px solid #baa0fa;
+
+    border-radius: 22px;
 
     display: flex;
     flex-direction: column;
 
-    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    box-shadow: 0 15px 35px rgba(95, 74, 160, 0.12);
 
-    transition: all 0.3s ease;
+    transition: all 0.35s ease;
 }
 
 .card:hover{
-    transform: translateY(-5px);
-    box-shadow: 0 12px 25px rgba(0,0,0,0.25);
+
+    transform: translateY(-8px);
+
+    box-shadow: 0 22px 45px rgba(95, 74, 160, 0.20);
 }
 
 .card-heading{
-    font-size: 1.6rem;
-    font-weight: bold;
-    color: #ecbcbc;
+
+    font-size: 1.55rem;
+    font-weight: 700;
+
+    color: #6A42D2;
+
     margin-bottom: 1rem;
 }
 
 .card-para{
-    font-size: 0.95rem;
-    line-height: 1.6;
-    color: #de92ed;
+
+    font-size: 1rem;
+    line-height: 1.8;
+
+    color: #625A78;
 }
 
-.button{
-    margin-top: 1.5rem;
-    padding: 0.8rem 1.5rem;
+/* =========================
+          BUTTON
+========================= */
 
-    background-color: #b2e3eb;
+.button{
+
+    margin-top: 2rem;
+
+    width: fit-content;
+
+    padding: 0.95rem 2rem;
+
+    border: none;
+
+    border-radius: 12px;
+
+    background: #7B5FEF;
+
+    color: white;
 
     font-size: 1rem;
     font-weight: 600;
 
     cursor: pointer;
 
-    width: fit-content;
-
-    border: none;
-    border-radius: 8px;
+    box-shadow: 0 8px 20px rgba(123, 95, 239, 0.25);
 
     transition: all 0.3s ease;
 }
 
 .button:hover{
-    opacity: 0.9;
-    transform: translateY(-2px);
+
+    background: #6949EA;
+
+    transform: translateY(-3px);
+
+    box-shadow: 0 12px 28px rgba(105, 73, 234, 0.35);
 }
 
-.right-section img{
-    width: 100%;
-    max-width: 550px;
-    height: auto;
-    object-fit: contain;
-}
+/* =========================
+      RESPONSIVE
+========================= */
 
-#main-heading{
-    font-size: 4rem;
-    margin-bottom: 1.5rem;
-    font-weight: 900;
-    color: #efeeb2;
-}
+@media (max-width: 1000px){
 
-#main-para{
-    font-size: 1.3rem;
-    max-width: 600px;
-    line-height: 1.7;
-    color: #3d3737;
+    .main-div{
+
+        flex-direction: column;
+        text-align: center;
+
+        padding: 3rem 0;
+    }
+
+    .left{
+
+        align-items: center;
+    }
+
+    #main-heading{
+
+        font-size: 3rem;
+    }
+
+    #main-para{
+
+        max-width: 90%;
+    }
+
+    .left-section{
+
+        width: 100%;
+    }
+
+    .button{
+
+        align-self: center;
+    }
+
+    .right-section{
+
+        margin-top: 2rem;
+    }
+
+    .right-section img{
+
+        max-width: 380px;
+    }
 }
