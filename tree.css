@@ -13,11 +13,11 @@
 
 body{
     min-height:100vh;
-    background:#EEE6FF;
-
     display:flex;
     justify-content:center;
     align-items:center;
+
+    background:#EEE6FF;
 }
 
 .main-container{
@@ -28,9 +28,9 @@ body{
     display:flex;
     gap:5rem;
 
-    padding:3rem 0;
-
     align-items:flex-start;
+
+    padding:3rem 0;
 }
 
 /* ---------------- LEFT ---------------- */
@@ -72,7 +72,7 @@ body{
     font-size:1.35rem;
     font-weight:700;
 
-    color:#5E35B1;
+    color:#5C3DA7;
 }
 
 .h3{
@@ -80,7 +80,7 @@ body{
     font-size:1.1rem;
     font-weight:600;
 
-    color:#5E35B1;
+    color:#5C3DA7;
 }
 
 /* ---------------- INPUT ---------------- */
@@ -97,11 +97,11 @@ body{
 
     padding:1rem;
 
-    border:2px solid #D6C4FF;
+    border:2px solid #D8C8FF;
 
     border-radius:14px;
 
-    background:#F8F3FF;
+    background:#FBF8FF;
 
     font-size:1rem;
 
@@ -112,9 +112,9 @@ body{
 
 #input-array:focus{
 
-    border-color:#7B5FEF;
+    border-color:#8CB996;
 
-    box-shadow:0 0 0 4px rgba(123,95,239,.15);
+    box-shadow:0 0 0 4px rgba(140,185,150,.18);
 }
 
 /* ---------------- SELECT ---------------- */
@@ -131,17 +131,26 @@ body{
 
     padding:1rem;
 
-    border:2px solid #D6C4FF;
+    border:2px solid #D8C8FF;
 
     border-radius:14px;
 
-    background:#F8F3FF;
+    background:#FBF8FF;
 
     font-size:1rem;
 
     cursor:pointer;
 
     outline:none;
+
+    transition:.3s;
+}
+
+#traversal-type:focus{
+
+    border-color:#8CB996;
+
+    box-shadow:0 0 0 4px rgba(140,185,150,.18);
 }
 
 /* ---------------- BUTTON ---------------- */
@@ -163,18 +172,18 @@ body{
 
     cursor:pointer;
 
-    transition:.3s;
+    transition:.3s ease;
 
-    box-shadow:0 8px 18px rgba(111,78,219,.22);
+    box-shadow:0 8px 16px rgba(111,78,219,.18);
 }
 
 .button:hover{
 
     background:#5D3FC8;
 
-    transform:translateY(-3px);
+    transform:translateY(-2px);
 
-    box-shadow:0 14px 28px rgba(111,78,219,.28);
+    box-shadow:0 12px 22px rgba(111,78,219,.25);
 }
 
 /* ---------------- OUTPUT ---------------- */
@@ -190,20 +199,20 @@ body{
 
     padding:1rem 1.2rem;
 
-    background:#F7F2FF;
+    background:#FBF8FF;
 
-    border-left:6px solid #7B5FEF;
+    border-left:5px solid #8CB996;
 
-    border-radius:10px;
+    border-radius:12px;
 
     color:#5C5870;
 
-    font-size:1rem;
-
-    min-height:65px;
+    min-height:70px;
 
     display:flex;
     align-items:center;
+
+    line-height:1.6;
 }
 
 /* ---------------- TREE CARD ---------------- */
@@ -214,24 +223,26 @@ body{
 
     min-height:550px;
 
-    background:#F3EAFF;
+    background:#FBF8FF;
 
-    border:2px solid #D6C4FF;
+    border:1px solid #D8C8FF;
 
-    border-radius:24px;
+    border-left:5px solid #8CB996;
+
+    border-radius:20px;
 
     padding:2rem;
 
-    box-shadow:
-        0 16px 35px rgba(90,70,170,.15);
+    box-shadow:0 8px 20px rgba(90,70,160,.10);
 
-    transition:.3s;
+    transition:.3s ease;
 }
 
 #tree-container:hover{
 
-    box-shadow:
-        0 22px 45px rgba(90,70,170,.20);
+    transform:translateY(-3px);
+
+    box-shadow:0 14px 28px rgba(90,70,160,.16);
 }
 
 /* ---------------- RESPONSIVE ---------------- */
@@ -241,6 +252,12 @@ body{
     .main-container{
 
         flex-direction:column;
+    }
+
+    .left-section,
+    .right-section{
+
+        width:100%;
     }
 
     .input-section,
