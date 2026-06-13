@@ -3,6 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="tree.css">
     <title>Tree Traversal Explorer</title>
 </head>
 <body>
@@ -11,9 +16,9 @@
 
         <div class="left-section">
 
-            <h1>🌳 Tree Traversal Explorer</h1>
+            <h1 class="h1" id="title">🌳 Tree Traversal Explorer</h1>
 
-            <h2>Input Array</h2>
+            <h2 class="h2" id="input">Input Array</h2>
 
             <div class="input-section">
                 <input
@@ -22,12 +27,12 @@
                     placeholder="Example: 10 5 15 3 7"
                 >
 
-                <button id="build-tree">
+                <button class = "button" id="build-tree">
                     Build Tree
                 </button>
             </div>
 
-            <h3>Select Traversal</h3>
+            <h3 class="h3" id="select">Select Traversal</h3>
 
             <div class="traversal-section">
 
@@ -38,7 +43,7 @@
                     <option value="levelorder">Level Order</option>
                 </select>
 
-                <button id="traverse-tree">
+                <button class="button" id="traverse-tree">
                     Traverse Tree
                 </button>
 
@@ -46,7 +51,7 @@
 
             <div class="output-section">
 
-                <h2>Traversal Output</h2>
+                <h2 class="h2" id="output">Traversal Output</h2>
 
                 <div id="traversal-output">
                     Output will appear here
@@ -58,7 +63,7 @@
 
         <div class="right-section">
 
-            <h2>Visual Tree</h2>
+            <h2 class="h2" id="visual-tree">Visual Tree</h2>
 
             <div id="tree-container">
 

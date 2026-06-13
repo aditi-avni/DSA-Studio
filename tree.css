@@ -1,0 +1,261 @@
+/* Google Font
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+*/
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:"Outfit",sans-serif;
+}
+
+body{
+    min-height:100vh;
+    background:#EEE6FF;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.main-container{
+
+    width:90%;
+    max-width:1400px;
+
+    display:flex;
+    gap:5rem;
+
+    padding:3rem 0;
+
+    align-items:flex-start;
+}
+
+/* ---------------- LEFT ---------------- */
+
+.left-section{
+
+    flex:1;
+
+    display:flex;
+    flex-direction:column;
+
+    gap:1.8rem;
+}
+
+/* ---------------- RIGHT ---------------- */
+
+.right-section{
+
+    flex:1;
+
+    display:flex;
+    flex-direction:column;
+
+    gap:1.5rem;
+}
+
+/* ---------------- HEADINGS ---------------- */
+
+.h1{
+
+    font-size:3rem;
+    font-weight:800;
+
+    color:#47236E;
+}
+
+.h2{
+
+    font-size:1.35rem;
+    font-weight:700;
+
+    color:#5E35B1;
+}
+
+.h3{
+
+    font-size:1.1rem;
+    font-weight:600;
+
+    color:#5E35B1;
+}
+
+/* ---------------- INPUT ---------------- */
+
+.input-section{
+
+    display:flex;
+    gap:1rem;
+}
+
+#input-array{
+
+    flex:1;
+
+    padding:1rem;
+
+    border:2px solid #D6C4FF;
+
+    border-radius:14px;
+
+    background:#F8F3FF;
+
+    font-size:1rem;
+
+    outline:none;
+
+    transition:.3s;
+}
+
+#input-array:focus{
+
+    border-color:#7B5FEF;
+
+    box-shadow:0 0 0 4px rgba(123,95,239,.15);
+}
+
+/* ---------------- SELECT ---------------- */
+
+.traversal-section{
+
+    display:flex;
+    gap:1rem;
+}
+
+#traversal-type{
+
+    flex:1;
+
+    padding:1rem;
+
+    border:2px solid #D6C4FF;
+
+    border-radius:14px;
+
+    background:#F8F3FF;
+
+    font-size:1rem;
+
+    cursor:pointer;
+
+    outline:none;
+}
+
+/* ---------------- BUTTON ---------------- */
+
+.button{
+
+    padding:1rem 1.8rem;
+
+    border:none;
+
+    border-radius:14px;
+
+    background:#6F4EDB;
+
+    color:white;
+
+    font-size:1rem;
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+    box-shadow:0 8px 18px rgba(111,78,219,.22);
+}
+
+.button:hover{
+
+    background:#5D3FC8;
+
+    transform:translateY(-3px);
+
+    box-shadow:0 14px 28px rgba(111,78,219,.28);
+}
+
+/* ---------------- OUTPUT ---------------- */
+
+.output-section{
+
+    margin-top:.5rem;
+}
+
+#traversal-output{
+
+    margin-top:.8rem;
+
+    padding:1rem 1.2rem;
+
+    background:#F7F2FF;
+
+    border-left:6px solid #7B5FEF;
+
+    border-radius:10px;
+
+    color:#5C5870;
+
+    font-size:1rem;
+
+    min-height:65px;
+
+    display:flex;
+    align-items:center;
+}
+
+/* ---------------- TREE CARD ---------------- */
+
+#tree-container{
+
+    width:100%;
+
+    min-height:550px;
+
+    background:#F3EAFF;
+
+    border:2px solid #D6C4FF;
+
+    border-radius:24px;
+
+    padding:2rem;
+
+    box-shadow:
+        0 16px 35px rgba(90,70,170,.15);
+
+    transition:.3s;
+}
+
+#tree-container:hover{
+
+    box-shadow:
+        0 22px 45px rgba(90,70,170,.20);
+}
+
+/* ---------------- RESPONSIVE ---------------- */
+
+@media(max-width:1000px){
+
+    .main-container{
+
+        flex-direction:column;
+    }
+
+    .input-section,
+    .traversal-section{
+
+        flex-direction:column;
+    }
+
+    .button{
+
+        width:100%;
+    }
+
+    .h1{
+
+        font-size:2.4rem;
+    }
+}
