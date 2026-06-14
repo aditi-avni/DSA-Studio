@@ -1,0 +1,300 @@
+/* Google Font
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+*/
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:"Outfit",sans-serif;
+}
+
+body{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    background:#EEE6FF;
+}
+
+.main-container{
+
+    width:90%;
+    max-width:1400px;
+
+    display:flex;
+    gap:5rem;
+
+    align-items:flex-start;
+
+    padding:3rem 0;
+}
+
+/* ---------------- CONTROL AREA ---------------- */
+
+.control-area{
+
+    flex:1;
+
+    display:flex;
+    flex-direction:column;
+
+    gap:1.8rem;
+}
+
+/* ---------------- GRAPH AREA ---------------- */
+
+.graph-area{
+
+    flex:1;
+
+    display:flex;
+    flex-direction:column;
+
+    gap:1.5rem;
+}
+
+/* ---------------- HEADINGS ---------------- */
+
+.h1{
+
+    font-size:3rem;
+    font-weight:800;
+
+    color:#47236E;
+}
+
+.h2{
+
+    font-size:1.35rem;
+    font-weight:700;
+
+    color:#5C3DA7;
+}
+
+#graph-title{
+
+    font-size:1.35rem;
+    font-weight:700;
+
+    color:#5C3DA7;
+}
+
+/* ---------------- SELECT ---------------- */
+
+#algorithm-type{
+
+    width:100%;
+
+    padding:1rem;
+
+    border:2px solid #D8C8FF;
+
+    border-radius:14px;
+
+    background:#FBF8FF;
+
+    font-size:1rem;
+
+    cursor:pointer;
+
+    outline:none;
+
+    transition:.3s;
+}
+
+#algorithm-type:focus{
+
+    border-color:#8CB996;
+
+    box-shadow:0 0 0 4px rgba(140,185,150,.18);
+}
+
+/* ---------------- RANGE INPUT ---------------- */
+
+.range-input{
+
+    display:flex;
+    gap:1rem;
+}
+
+.range-input-field{
+
+    flex:1;
+
+    padding:1rem;
+
+    border:2px solid #D8C8FF;
+
+    border-radius:14px;
+
+    background:#FBF8FF;
+
+    font-size:1rem;
+
+    outline:none;
+
+    transition:.3s;
+}
+
+.range-input-field:focus{
+
+    border-color:#8CB996;
+
+    box-shadow:0 0 0 4px rgba(140,185,150,.18);
+}
+
+/* ---------------- BUTTON ---------------- */
+
+.button{
+
+    width:fit-content;
+
+    padding:1rem 2rem;
+
+    border:none;
+
+    border-radius:14px;
+
+    background:#6F4EDB;
+
+    color:white;
+
+    font-size:1rem;
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:.3s ease;
+
+    box-shadow:0 8px 16px rgba(111,78,219,.18);
+}
+
+.button:hover{
+
+    background:#5D3FC8;
+
+    transform:translateY(-2px);
+
+    box-shadow:0 12px 22px rgba(111,78,219,.25);
+}
+
+/* ---------------- INFO CARD ---------------- */
+
+.information-box{
+
+    background:#FBF8FF;
+
+    border:1px solid #D8C8FF;
+
+    border-left:5px solid #8CB996;
+
+    border-radius:20px;
+
+    padding:2rem;
+
+    display:flex;
+    flex-direction:column;
+
+    gap:1rem;
+
+    box-shadow:0 8px 20px rgba(90,70,160,.10);
+
+    transition:.3s ease;
+}
+
+.information-box:hover{
+
+    transform:translateY(-3px);
+
+    box-shadow:0 14px 28px rgba(90,70,160,.16);
+}
+
+#algorithm-info{
+
+    color:#5C5870;
+
+    line-height:1.8;
+
+    font-size:1rem;
+}
+
+/* ---------------- GRAPH CARD ---------------- */
+
+.graph-card{
+
+    width:100%;
+
+    min-height:550px;
+
+    background:#FBF8FF;
+
+    border:1px solid #D8C8FF;
+
+    border-left:5px solid #8CB996;
+
+    border-radius:20px;
+
+    padding:2rem;
+
+    box-shadow:0 8px 20px rgba(90,70,160,.10);
+
+    transition:.3s ease;
+}
+
+.graph-card:hover{
+
+    transform:translateY(-3px);
+
+    box-shadow:0 14px 28px rgba(90,70,160,.16);
+}
+
+#complexity-graph{
+
+    width:100% !important;
+    height:500px !important;
+}
+
+/* ---------------- RESPONSIVE ---------------- */
+
+@media(max-width:1000px){
+
+    .main-container{
+
+        flex-direction:column;
+    }
+
+    .control-area,
+    .graph-area{
+
+        width:100%;
+    }
+
+    .range-input{
+
+        flex-direction:column;
+    }
+
+    .button{
+
+        width:100%;
+    }
+
+    .h1{
+
+        font-size:2.4rem;
+    }
+
+    .graph-card{
+
+        min-height:420px;
+    }
+
+    #complexity-graph{
+
+        height:350px !important;
+    }
+}

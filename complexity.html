@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="complexity.css">
+    <title>Complexity Explorer</title>
+</head>
+<body>
+
+    <div class="main-container">
+
+        <div class="control-area">
+
+            <h1 class="h1" id="title">
+                📈 Complexity Explorer
+            </h1>
+
+            <h2 class="h2" id="algo-input">
+                Choose an Algorithm
+            </h2>
+
+            <select  id="algorithm-type">
+                <option value="linear-search">Linear Search</option>
+                <option value="binary-search">Binary Search</option>
+                <option value="bubble-sort">Bubble Sort</option>
+                <option value="merge-sort">Merge Sort</option>
+                <option value="quick-sort">Quick Sort</option>
+                <option value="insertion-sort">Insertion Sort</option>
+            </select>
+
+            <h2 class="h2" id="range-input">
+                Input Range
+            </h2>
+
+            <div class="range-input">
+
+                <input type="number" class="range-input-field" id="min-value" placeholder="Minimum N" >
+
+                <input type="number" class="range-input-field" id="max-value" placeholder="Maximum N" >
+
+            </div>
+
+            <button class="button" id="generate-graph">
+                Generate Graph
+            </button>
+
+            <div class="information-box">
+
+                <h2 class="h2">
+                    Algorithm Information
+                </h2>
+
+                <div id="algorithm-info">
+                    Select an algorithm to view its time complexity,
+                    space complexity, and basic details.
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="graph-area">
+
+            <h2 id="graph-title">
+                Complexity Graph
+            </h2>
+
+            <div class="graph-card">
+                <canvas id="complexity-graph"></canvas>
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+</html>
